@@ -1,5 +1,8 @@
+import connectDB from "../../../utils/database";
+import { ItemModel } from "../../../utils/schemaModels"
 
 const createItem = (req, res) => {
+  connectDB()
   console.log(req.body.title);
   return res.status(200).json({
     message: "item作成"
@@ -8,7 +11,3 @@ const createItem = (req, res) => {
 
 export default createItem
 
-
-https://data.mongodb-api.com/app/data-ydtfo/endpoint/data/v1
-
-cmXUItLBbWcGLuLQM3KDFOOi4nS27tMcbSkbwopK7IIiG4NiWj8C2kbea1GgXB7H
